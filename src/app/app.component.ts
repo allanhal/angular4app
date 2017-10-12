@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'FIRST ANGULAR 4 APP';
-  subTitle = 'by Allan Araújo';
+  
 }
