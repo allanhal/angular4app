@@ -16,3 +16,5 @@ app.set('port', port)
 
 const server = http.createServer(app)
 server.listen(port, () => console.log('server up on port ' + port))
+
+require('gh-pages').publish('dist', function (err) { });
