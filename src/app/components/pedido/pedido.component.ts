@@ -35,7 +35,7 @@ export class PedidoComponent implements OnInit {
 
   clickDelete(pedido) {
     this.dataService.delete('pedido', pedido).subscribe((success) => {
-      console.log(success)
+      this.refreshPedidos()
     })
   }
 
