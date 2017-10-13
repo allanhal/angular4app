@@ -61,9 +61,13 @@
     </ul>
 
     <h1>Pedidos</h1>
-    <div *ngFor="let pedido of pedidos">
-        <hr>
-        <h4>{{pedido.nome}}</h4>
-        <p>{{pedido.tipo}}</p>
+    <div class="row">
+        <div *ngFor="let pedido of pedidos" class="col">
+            <hr>
+            <h3>Nome </h3>
+            <p class="lead">{{pedido.nome}}</p>
+            <h4>Tipo</h4>
+            <p>{{pedido.tipo}}</p>
+        </div>
     </div>
 </div>

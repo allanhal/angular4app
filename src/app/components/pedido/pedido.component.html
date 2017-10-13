@@ -67,10 +67,10 @@
                 {{ pedido.tempo }}
               </td>
               <td>
-                <button class="btn btn-sm btn-primary" ng-click="editPedido(pedido)">
+                <button class="btn btn-sm btn-primary" (click)="editPedido(pedido)">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                 </button>
-                <button class="btn btn-sm btn-danger" ng-click="removePedido(pedido)">
+                <button class="btn btn-sm btn-danger" (click)="clickDelete(pedido)">
                   <i class="fa fa-trash" aria-hidden="true"></i>
                 </button>
               </td>
@@ -81,8 +81,8 @@
     </div>
     <div class="row py-3">
       <div class="col-12 text-right">
-        <button class="btn btn-sm btn-primary btn-lg" ng-click="refreshPedidos()">
-          <i class="fa fa-refresh" aria-hidden="true"></i> Atualizar</button>
+        <button class="btn btn-sm btn-primary btn-lg" (click)="clickRefresh()">
+          <i class="fa fa-refresh" aria-hidden="true"></i> Novo Atualizar</button>
       </div>
     </div>
 
