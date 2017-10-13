@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 
 import { DataService } from './services/data.service';
-import { AboutComponent } from './components/about/about.component'
+import { AboutComponent } from './components/about/about.component';
+import { PedidoComponent } from './components/pedido/pedido.component'
 
 
 const appRoutes: Routes = [
   { path: '', component: UserComponent },
+  { path: 'pedido', component: PedidoComponent },
   { path: 'about', component: AboutComponent }
 ]
 
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     UserComponent,
-    AboutComponent
+    AboutComponent,
+    PedidoComponent
   ],
   imports: [
     BrowserModule,
