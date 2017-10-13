@@ -1,6 +1,6 @@
 <div class="container py-5">
   <div class="text-center">
-    <h1 class="display-1">Angular 4</h1>
+    <h1 class="display-1">Angular 4 CRUD</h1>
   </div>
   <div class="container py-5">
     <div class="row py-3">
@@ -167,7 +167,9 @@
 
     <div class="row">
       <div class="col-12 text-right">
-        <button class="btn btn-sm btn-primary" ng-click="submitPedido()" ng-disabled="!pedidoFormChanged">
+        <button class="btn btn-sm btn-danger" ng-click="clearPedido()">
+          <i class="fa fa-trash" aria-hidden="true"></i> Limpar</button>
+        <button class="btn btn-sm btn-primary" ng-click="submitPedido()">
           <i class="fa fa-pencil" aria-hidden="true"></i> Salvar</button>
       </div>
     </div>
