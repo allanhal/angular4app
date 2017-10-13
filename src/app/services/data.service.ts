@@ -13,4 +13,8 @@ export class DataService {
     return this.http.get('https://rest-on-demand.herokuapp.com/api/pedido').map(res => res.json())
   }
 
+  getApi(type) {
+    return this.http.get('https://rest-on-demand.herokuapp.com/api/' + type).map(res => res.json())
+  }
+
 }

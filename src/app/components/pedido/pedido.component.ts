@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service'
 
 @Component({
   selector: 'app-pedido',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidoComponent implements OnInit {
 
-  constructor() { }
+  pedidos: Pedido[]
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+
+    this.dataService.getApi('pedido').subscribe((pedidos) => {
+      this.pedidos = pedidos;
+    })
+
   }
 
 }
