@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http'
-// import 'rxjs
+import 'rxjs/add/operator/map'
 
 @Injectable()
 export class DataService {
@@ -10,7 +10,7 @@ export class DataService {
   }
 
   getPedidos() {
-    this.http.get('https://rest-on-demand.herokuapp.com/api/pedido')
+    return this.http.get('https://rest-on-demand.herokuapp.com/api/pedido').map(res => res.json())
   }
 
 }
