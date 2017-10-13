@@ -13,8 +13,8 @@ import { PedidoComponent } from './components/pedido/pedido.component'
 
 
 const appRoutes: Routes = [
-  { path: '', component: UserComponent },
-  { path: 'pedido', component: PedidoComponent },
+  { path: '', component: PedidoComponent },
+  { path: 'user', component: UserComponent },
   { path: 'about', component: AboutComponent }
 ]
 

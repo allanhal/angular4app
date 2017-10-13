@@ -39,4 +39,12 @@ export class PedidoComponent implements OnInit {
     })
   }
 
+  clickClearPedido() {
+    this.pedidoForm = {} as Pedido
+  }
+
+  clickSubmitPedido() {
+    this.pedidoForm = {} as Pedido
+  }
+
 }

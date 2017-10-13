@@ -2,176 +2,138 @@
   <div class="text-center">
     <h1 class="display-1">Angular 4 CRUD</h1>
   </div>
-  <div class="container py-5">
-    <div class="row py-3">
-      <div class="col-12">
-        <table id="tablePedido" class="display table table-responsive table-hover table-striped table-bordered bg-faded small" cellspacing="0"
-          width="100%">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Nome</th>
-              <th>Telefone</th>
-              <th>Email</th>
-              <th>Tipo</th>
-              <th>Tamanho</th>
-              <th>Quadro</th>
-              <th>Garfo</th>
-              <th>Guidao</th>
-              <th>Aro</th>
-              <th>Pedivela</th>
-              <th>Preco</th>
-              <th>Tempo</th>
-              <th>Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let pedido of pedidos">
-              <td>
-                {{ pedido._id }}
-              </td>
-              <td>
-                {{ pedido.nome }}
-              </td>
-              <td>
-                {{ pedido.telefone }}
-              </td>
-              <td>
-                {{ pedido.email }}
-              </td>
-              <td>
-                {{ pedido.tipo }}
-              </td>
-              <td>
-                {{ pedido.tamanho }}
-              </td>
-              <td>
-                {{ pedido.quadro }}
-              </td>
-              <td>
-                {{ pedido.garfo }}
-              </td>
-              <td>
-                {{ pedido.guidao }}
-              </td>
-              <td>
-                {{ pedido.aro }}
-              </td>
-              <td>
-                {{ pedido.pedivela }}
-              </td>
-              <td>
-                {{ pedido.preco }}
-              </td>
-              <td>
-                {{ pedido.tempo }}
-              </td>
-              <td>
-                <button class="btn btn-sm btn-primary" (click)="clickEdit(pedido)">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-sm btn-danger" (click)="clickDelete(pedido)">
-                  <i class="fa fa-trash" aria-hidden="true"></i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
+  <div class="row py-3">
+    <div class="col" *ngFor="let pedido of pedidos">
+      <b>Id</b>:
+      <br>{{ pedido._id .toString().substring(12,3)}}
+      <b>
+        <h5>Nome:</h5>
+      </b>
+      <h1>{{ pedido.nome }}</h1>
+      <i>Telefone:</i>
+      <br>{{ pedido.telefone }}
+      <br>
+      <i>Email:</i>
+      <br>{{ pedido.email }}
+      <br>
+      <i>Tipo:</i>
+      <br>{{ pedido.tipo }}
+      <br>
+      <i>Tamanho:</i>
+      <br>{{ pedido.tamanho }}
+      <br>
+      <i>Quadro:</i>
+      <br>{{ pedido.quadro }}
+      <br>
+      <i>Garfo:</i>
+      <br>{{ pedido.garfo }}
+      <br>
+      <i>Guidao:</i>
+      <br>{{ pedido.guidao }}
+      <br>
+      <i>Aro:</i>
+      <br>{{ pedido.aro }}
+      <br>
+      <i>Pedivela:</i>
+      <br>{{ pedido.pedivela }}
+      <br>
+      <i>Preco:</i>
+      <br>{{ pedido.preco }}
+      <br>
+      <i>Tempo:</i>
+      <br>{{ pedido.tempo }}
+      <br> Ações
+      <br>
+      <button class="btn btn-sm btn-primary" (click)="clickEdit(pedido)">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </button>
+      <button class="btn btn-sm btn-danger" (click)="clickDelete(pedido)">
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </button>
     </div>
-    <div class="row py-3">
-      <div class="col-12 text-right">
-        <button class="btn btn-sm btn-primary btn-lg" (click)="clickRefresh()">
-          <i class="fa fa-refresh" aria-hidden="true"></i> Novo Atualizar</button>
-      </div>
+  </div>
+
+  <div class="row py-3">
+    <div class="col text-right">
+      <button class="btn btn-sm btn-primary btn-lg" (click)="clickRefresh()">
+        <i class="fa fa-refresh" aria-hidden="true"></i> Novo Atualizar</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label for="inputId">Id:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm._id" ng-keyup="pedidoFormKeyUp()">
     </div>
 
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputId">Id:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm._id" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputNome">Nome:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.nome" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputTelefone">Telefone:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.telefone" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputEmail">Email:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.email" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputTipo">Tipo:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.tipo" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputTamanho">Tamanho:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.tamanho" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputQuadro">Quadro:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.quadro" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputGarfo">Garfo:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.garfo" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputGuidao">Guidao:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.guidao" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputAro">Aro:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.aro" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputPedivela">Pedivela:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.pedivela" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputPreco">Preco:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.preco" ng-keyup="pedidoFormKeyUp()">
-      </div>
-    </div>
-    <div class="row py-3 text-left">
-      <div class="col-12">
-        <label for="inputTempo">Tempo:</label>
-        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.tempo" ng-keyup="pedidoFormKeyUp()">
-      </div>
+    <div class="col">
+      <label for="inputNome">Nome:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.nome" ng-keyup="pedidoFormKeyUp()">
     </div>
 
-    <div class="row">
-      <div class="col-12 text-right">
-        <button class="btn btn-sm btn-danger" ng-click="clearPedido()">
-          <i class="fa fa-trash" aria-hidden="true"></i> Limpar</button>
-        <button class="btn btn-sm btn-primary" ng-click="submitPedido()">
-          <i class="fa fa-pencil" aria-hidden="true"></i> Salvar</button>
-      </div>
+    <div class="col">
+      <label for="inputTelefone">Telefone:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.telefone" ng-keyup="pedidoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputEmail">Email:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.email" ng-keyup="pedidoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputTipo">Tipo:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.tipo" ng-keyup="pedidoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputTamanho">Tamanho:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.tamanho" ng-keyup="pedidoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputQuadro">Quadro:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.quadro" ng-keyup="pedidoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputGarfo">Garfo:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.garfo" ng-keyup="pedidoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputGuidao">Guidao:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.guidao" ng-keyup="pedidoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputAro">Aro:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.aro" ng-keyup="pedidoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputPedivela">Pedivela:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.pedivela" ng-keyup="pedidoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputPreco">Preco:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.preco" ng-keyup="pedidoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputTempo">Tempo:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.tempo" ng-keyup="pedidoFormKeyUp()">
+    </div>
+  </div>
+
+  <div class="row py-3">
+    <div class="col text-right">
+      <button class="btn btn-sm btn-danger" (click)="clickClearPedido()" ng-click="clearPedido()">
+        <i class="fa fa-trash" aria-hidden="true"></i> Limpar</button>
+      <button class="btn btn-sm btn-primary" (click)="clickSubmitPedido()" ng-click="submitPedido()">
+        <i class="fa fa-pencil" aria-hidden="true"></i> Salvar</button>
     </div>
   </div>
 </div>

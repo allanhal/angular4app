@@ -1,2 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css?family=Dosis|Lora|Manuale|Poppins|Roboto|Ubuntu');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Manuale', serif; */
+    /* font-family: 'Ubuntu', sans-serif; */
+    /* font-family: 'Lora', serif; */
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Dosis', sans-serif; */
+}
