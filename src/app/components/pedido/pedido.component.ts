@@ -9,12 +9,14 @@ import alertify from 'alertify.js';
 })
 export class PedidoComponent implements OnInit {
 
+  pedidoForm: Pedido
   pedidos: Pedido[]
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.refreshPedidos()
+    this.pedidoForm = {} as Pedido
   }
 
   refreshPedidos() {
@@ -25,6 +27,10 @@ export class PedidoComponent implements OnInit {
 
   clickRefresh() {
     this.refreshPedidos();
+  }
+
+  clickEdit(pedido) {
+    this.pedidoForm = pedido;
   }
 
   clickDelete(pedido) {

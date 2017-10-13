@@ -67,7 +67,7 @@
                 {{ pedido.tempo }}
               </td>
               <td>
-                <button class="btn btn-sm btn-primary" (click)="editPedido(pedido)">
+                <button class="btn btn-sm btn-primary" (click)="clickEdit(pedido)">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                 </button>
                 <button class="btn btn-sm btn-danger" (click)="clickDelete(pedido)">
@@ -89,79 +89,79 @@
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputId">Id:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm._id" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm._id" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputNome">Nome:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.nome" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.nome" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputTelefone">Telefone:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.telefone" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.telefone" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputEmail">Email:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.email" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.email" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputTipo">Tipo:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.tipo" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.tipo" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputTamanho">Tamanho:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.tamanho" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.tamanho" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputQuadro">Quadro:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.quadro" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.quadro" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputGarfo">Garfo:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.garfo" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.garfo" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputGuidao">Guidao:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.guidao" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.guidao" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputAro">Aro:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.aro" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.aro" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputPedivela">Pedivela:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.pedivela" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.pedivela" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputPreco">Preco:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.preco" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.preco" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
     <div class="row py-3 text-left">
       <div class="col-12">
         <label for="inputTempo">Tempo:</label>
-        <input type="text" class="form-control" id="input" ng-model="pedidoForm.tempo" ng-keyup="pedidoFormKeyUp()">
+        <input type="text" class="form-control" id="input" [(ngModel)]="pedidoForm.tempo" ng-keyup="pedidoFormKeyUp()">
       </div>
     </div>
 
