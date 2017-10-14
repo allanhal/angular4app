@@ -9,8 +9,8 @@
   "main": "app.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "start o": "ng serve -o",
+    "start": "node app.js",
+    "serve o": "ng serve -o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
