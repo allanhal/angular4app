@@ -16,7 +16,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng build",
-    "postinstall": "ng build --aot -prod"
+    "preinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
