@@ -2,6 +2,11 @@
   "name": "angular4app",
   "version": "1.0.0",
   "license": "MIT",
+  "description": "Angular 4 App to access a REST SERVER",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "main": "app.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class DataService {
 
-  api: string = 'https://rest-on-demand.herokuapp.com/api/'
+  api: string = 'https://rest-on-demand.herokuapp.com/sql/'
 
   constructor(public http: Http) {
   }
