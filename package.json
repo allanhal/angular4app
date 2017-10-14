@@ -6,10 +6,10 @@
   "engines": {
     "node": "6.11.1"
   },
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "ng": "ng",
-    "start": "node app.js",
+    "start": "node index.js",
     "serve o": "ng serve -o",
     "build": "ng build",
     "test": "ng test",
