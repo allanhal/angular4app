@@ -17,14 +17,16 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng build",
-    "preinstall": "npm install -g @angular/cli",
-    "postinstall": "ng build --aot -prod"
+    "preinstall": "npm install -g @angular/cli && npm i @angular/compiler-cli",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "1.4.7",
     "@angular/animations": "^4.2.4",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
+    "@angular/compiler-cli": "^4.4.5",
     "@angular/core": "^4.2.4",
     "@angular/forms": "^4.2.4",
     "@angular/http": "^4.2.4",
@@ -41,6 +43,7 @@
     "jquery": "^3.2.1",
     "popper.js": "^1.12.5",
     "rxjs": "^5.4.2",
+    "typescript": "^2.3.4",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
