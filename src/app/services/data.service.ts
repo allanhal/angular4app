@@ -10,13 +10,23 @@ export class DataService {
   constructor(public http: Http) {
   }
 
-  getApi(type) {
+  getAll(type) {
     return this.http.get(this.api + type).map(res => res.json())
   }
 
   delete(type, pedido) {
     return this.http.delete(this.api + type + '/' + pedido._id)
       .map(success => success.status);
+  }
+
+  update(type, pedido) {
+    return this.http.put(this.api + type + '/' + pedido._id, pedido)
+      .map(res => res.json())
+  }
+
+  save(type, pedido) {
+    return this.http.post(this.api + type, pedido)
+      .map(res => res.json())
   }
 
 }

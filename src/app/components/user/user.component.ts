@@ -36,7 +36,7 @@ export class UserComponent implements OnInit {
     this.hello = true
 
 
-    this.dataService.getApi('pedido').subscribe((pedidos) => {
+    this.dataService.getAll('pedido').subscribe((pedidos) => {
       this.pedidos = pedidos;
     })
   }

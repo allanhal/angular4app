@@ -11,6 +11,7 @@ export class PedidoComponent implements OnInit {
 
   pedidoForm: Pedido
   pedidos: Pedido[]
+  pedidoFormChanged: boolean = false
 
   constructor(private dataService: DataService) { }
 
@@ -20,7 +21,7 @@ export class PedidoComponent implements OnInit {
   }
 
   refreshPedidos() {
-    this.dataService.getApi('pedido').subscribe((pedidos) => {
+    this.dataService.getAll('pedido').subscribe((pedidos) => {
       this.pedidos = pedidos;
     })
   }
@@ -44,7 +45,22 @@ export class PedidoComponent implements OnInit {
   }
 
   clickSubmitPedido() {
-    this.pedidoForm = {} as Pedido
+    var method = "";
+    var id = this.pedidoForm._id;
+    if (id) {
+
+      this.dataService.update('pedido', this.pedidoForm).subscribe((pedido) => {
+        alertify.success("Pedido atualizado.");
+        this.refreshPedidos()
+      })
+
+    } else {
+      this.dataService.save('pedido', this.pedidoForm).subscribe((pedido) => {
+        alertify.success("Pedido salvo.");
+        this.refreshPedidos()
+      })
+    }
+
   }
 
 }
