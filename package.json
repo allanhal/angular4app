@@ -5,7 +5,7 @@
   "description": "Angular 4 App to access a REST SERVER",
   "engines": {
     "node": "6.11.1",
-    "npm": "3.10.10",
+    "npm": "3.10.10"
   },
   "main": "index.js",
   "scripts": {
