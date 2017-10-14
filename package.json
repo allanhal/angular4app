@@ -4,8 +4,8 @@
   "license": "MIT",
   "description": "Angular 4 App to access a REST SERVER",
   "engines": {
-    "node": "6.11.1",
-    "npm": "3.10.10"
+    "node": "6.11.3",
+    "npm": "5.5.1"
   },
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng build",
-    "preinstall": "npm install -g @angular/cli && npm i @angular/compiler-cli",
     "postinstall": "ng build --prod"
   },
   "private": true,
