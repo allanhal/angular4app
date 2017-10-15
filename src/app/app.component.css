@@ -27,28 +27,28 @@ h1 {
 .color1
 {
     /* background-color: rgba(5, 102, 141, 0.15); */
-    background-color: rgba(63, 64, 66, 0.25);
+    background-color: rgba(63, 64, 66, 0.1);
 }
 
 .color2
 {
     /* background-color: rgba(2, 128, 144, 0.15); */
-    background-color: rgba(94, 94, 96, 0.25);
+    background-color: rgba(94, 94, 96, 0.1);
 }
 
 .color3
 {
     /* background-color: rgba(0, 168, 150, 0.15); */
-    background-color: rgba(123, 123, 124, 0.25);
+    background-color: rgba(123, 123, 124, 0.1);
 }
 
 .color4
 {
     /* background-color: rgba(2, 195, 154, 0.15); */
-    background-color: rgba(154, 154, 155, 0.25);
+    background-color: rgba(154, 154, 155, 0.1);
 }
 
 .color5{
     /* background-color: rgba(240, 243, 189, 0.15); */
-    background-color: rgba(202, 202, 202, 0.25);
+    background-color: rgba(202, 202, 202, 0.1);
 }
