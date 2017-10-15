@@ -7,11 +7,11 @@
     "node": "6.11.3",
     "npm": "5.5.1"
   },
-  "main": "rest-on-demand/index.js",
+  "main": "index.js",
   "scripts": {
     "ng": "ng",
-    "nodemon": "ng build --prod && nodemon rest-on-demand/index.js",
-    "start": "node rest-on-demand/index.js",
+    "nodemon": "ng build --prod && nodemon index.js",
+    "start": "node index.js",
     "dev": "ng serve",
     "dev o": "ng serve -o",
     "build": "ng build",
