@@ -5,7 +5,7 @@
   <hr>
 
   <div class="row py-3">
-    <div class="col round-corners" *ngFor="let aluno of alunos">
+    <div class="col mx-3 py-3 my-3 round-corners" *ngFor="let aluno of alunos">
       <b>Id</b>:
       <br>{{ aluno._id}}
       <b>
@@ -15,13 +15,24 @@
       <i>Data de Nascimento:</i>
       <br>{{ aluno.dataNascimento }}
       <br>
-      <br> Ações
+      <div class="row px-3">
+          <div class="col mx-1 py-1 my-1 round-corners" *ngFor="let nota of aluno.nota">
+          <b>Nota {{ index }}</b>
+          <br>
+          <i>Id: </i>{{ nota._id }}
+          <br>
+          <i>Data Prova: </i>{{ nota.dataProva }}
+          <br>
+          <i>Nota: </i>{{ nota._id }}
+          <br>
+        </div>
+      </div>
       <br>
       <button class="btn btn-sm btn-primary" (click)="clickEdit(aluno)">
-        <i class="fa fa-pencil" aria-hidden="true"></i> Editar
+        <i class="fa fa-pencil" aria-hidden="true"></i> 
       </button>
       <button class="btn btn-sm btn-danger" (click)="clickDelete(aluno)">
-        <i class="fa fa-trash" aria-hidden="true"></i> Remover
+        <i class="fa fa-trash" aria-hidden="true"></i> 
       </button>
     </div>
   </div>

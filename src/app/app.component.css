@@ -52,3 +52,19 @@ h1 {
     /* background-color: rgba(240, 243, 189, 0.15); */
     background-color: rgba(202, 202, 202, 0.1);
 }
+
+.color-dark{
+    background-color: rgb(52, 58, 64)
+}
+
+.navbar-color-dark{
+    background: transparent;
+    background-color: rgb(52, 58, 64)
+}
+
+
+
+
+/* ================== */
+
+
