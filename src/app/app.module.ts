@@ -9,11 +9,13 @@ import { UserComponent } from './components/user/user.component';
 
 import { DataService } from './services/data.service';
 import { AboutComponent } from './components/about/about.component';
-import { PedidoComponent } from './components/pedido/pedido.component'
+import { PedidoComponent } from './components/pedido/pedido.component';
+import { AlunoComponent } from './components/aluno/aluno.component'
 
 
 const appRoutes: Routes = [
   { path: '', component: PedidoComponent },
+  { path: 'aluno', component: AlunoComponent },
   { path: 'user', component: UserComponent },
   { path: 'about', component: AboutComponent }
 ]
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     AppComponent,
     UserComponent,
     AboutComponent,
-    PedidoComponent
+    PedidoComponent,
+    AlunoComponent
   ],
   imports: [
     BrowserModule,

@@ -12,8 +12,13 @@ export class PedidoComponent implements OnInit {
   pedidoForm: Pedido
   pedidos: Pedido[]
   pedidoFormChanged: boolean = false
+  angular: string;
+  crud: string;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) { 
+    this.angular = 'assets/angular.svg'
+    this.crud = 'assets/crud.png'
+  }
 
   ngOnInit() {
     this.refreshPedidos()

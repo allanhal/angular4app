@@ -1,0 +1,64 @@
+<div class="container py-5">
+  <div class="text-center">
+    <h1 class="big-font">Aluno</h1>
+  </div>
+  <hr>
+
+  <div class="row py-3">
+    <div class="col round-corners" *ngFor="let aluno of alunos">
+      <b>Id</b>:
+      <br>{{ aluno._id}}
+      <b>
+        <h5>Nome:</h5>
+      </b>
+      <h1>{{ aluno.nome }}</h1>
+      <i>Data de Nascimento:</i>
+      <br>{{ aluno.dataNascimento }}
+      <br>
+      <br> Ações
+      <br>
+      <button class="btn btn-sm btn-primary" (click)="clickEdit(aluno)">
+        <i class="fa fa-pencil" aria-hidden="true"></i> Editar
+      </button>
+      <button class="btn btn-sm btn-danger" (click)="clickDelete(aluno)">
+        <i class="fa fa-trash" aria-hidden="true"></i> Remover
+      </button>
+    </div>
+  </div>
+
+
+  <div class="row py-3">
+    <div class="col text-right">
+      <button class="btn btn-sm btn-primary btn-lg" (click)="clickRefresh()">
+        <i class="fa fa-refresh" aria-hidden="true"></i> Atualizar</button>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col">
+      <label for="inputId">Id:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="alunoForm._id" ng-keyup="alunoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputNome">Nome:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="alunoForm.nome" ng-keyup="alunoFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputNome">Data de Nascimento:</label>
+      <input type="date" class="form-control form-control-sm" id="input" [(ngModel)]="alunoForm.dataNascimento" ng-keyup="alunoFormKeyUp()">
+    </div>
+
+    <div class="row py-3">
+      <div class="col text-right">
+        <button class="btn btn-sm btn-danger" (click)="clickClearAluno()" ng-click="clearAluno()">
+          <i class="fa fa-trash" aria-hidden="true"></i> Limpar</button>
+        <button class="btn btn-sm btn-success" (click)="clickSubmitAluno()" ng-click="submitAluno()">
+          <i class="fa fa-pencil" aria-hidden="true"></i> Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>

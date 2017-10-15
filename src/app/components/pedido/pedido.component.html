@@ -1,10 +1,11 @@
 <div class="container py-5">
   <div class="text-center">
-    <h1 class="display-1">Angular 4 CRUD</h1>
+    <h1 class="big-font">Pedido</h1>
   </div>
+  <hr>
 
   <div class="row py-3">
-    <div class="col" *ngFor="let pedido of pedidos">
+    <div class="col round-corners" *ngFor="let pedido of pedidos">
       <b>Id</b>:
       <br>{{ pedido._id}}
       <b>
@@ -46,10 +47,10 @@
       <br> Ações
       <br>
       <button class="btn btn-sm btn-primary" (click)="clickEdit(pedido)">
-        <i class="fa fa-pencil" aria-hidden="true"></i>
+        <i class="fa fa-pencil" aria-hidden="true"></i> Editar
       </button>
       <button class="btn btn-sm btn-danger" (click)="clickDelete(pedido)">
-        <i class="fa fa-trash" aria-hidden="true"></i>
+        <i class="fa fa-trash" aria-hidden="true"></i> Remover
       </button>
     </div>
   </div>
@@ -57,9 +58,11 @@
   <div class="row py-3">
     <div class="col text-right">
       <button class="btn btn-sm btn-primary btn-lg" (click)="clickRefresh()">
-        <i class="fa fa-refresh" aria-hidden="true"></i> Novo Atualizar</button>
+        <i class="fa fa-refresh" aria-hidden="true"></i> Atualizar</button>
     </div>
   </div>
+
+  <hr>
 
   <div class="row">
     <div class="col">
@@ -132,7 +135,7 @@
     <div class="col text-right">
       <button class="btn btn-sm btn-danger" (click)="clickClearPedido()" ng-click="clearPedido()">
         <i class="fa fa-trash" aria-hidden="true"></i> Limpar</button>
-      <button class="btn btn-sm btn-primary" (click)="clickSubmitPedido()" ng-click="submitPedido()">
+      <button class="btn btn-sm btn-success" (click)="clickSubmitPedido()" ng-click="submitPedido()">
         <i class="fa fa-pencil" aria-hidden="true"></i> Salvar</button>
     </div>
   </div>
