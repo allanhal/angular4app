@@ -1,1 +1,1 @@
-web: node index.js
+web: node rest-on-demand/index.js
