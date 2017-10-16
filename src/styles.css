@@ -1,17 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import url('https://fonts.googleapis.com/css?family=Dosis|Lora|Manuale|Poppins|Roboto|Ubuntu|Saira+Extra+Condensed|Open+Sans:300|Quicksand:300'); 
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300'); 
 
 body{
-    /* font-family: 'Roboto', sans-serif; */
-    /* font-family: 'Manuale', serif; */
-    /* font-family: 'Ubuntu', sans-serif; */
-    /* font-family: 'Lora', serif; */
-    /* font-family: 'Poppins', sans-serif; */
-    /* font-family: 'Dosis', sans-serif; */
-    /* font-family: 'Saira Extra Condensed', sans-serif; */
-    /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Quicksand', sans-serif;
+}
+
+.big-font{
+    font-size: 20vw;
+}
+
+.round-corners {
+    border-radius: 5px;
+    border: 2px solid lightslategray
 }
 
 .bo1
