@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 import { RouterModule, Routes } from '@angular/router';
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
@@ -43,6 +44,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     BootstrapModalModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
   //Don't forget to add the component to entryComponents section

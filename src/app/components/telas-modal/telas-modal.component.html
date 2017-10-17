@@ -1,3 +1,42 @@
-<p>
-  telas-modal works!
-</p>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row py-3">
+      <table class="table">
+        <thead>
+          <th>IdUsuario</th>
+          <th>Nome</th>
+          <th>Tipo</th>
+          <th>Ações</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tela of telas">
+            <td>{{ tela.idusuarios}}</td>
+            <td>{{ tela.Nome }}</td>
+            <td>{{ tela.tipo }}</td>
+            <td>
+              <button class="btn btn-sm btn-primary" (click)="clickEdit(tela)">
+                <i class="fa fa-pencil" aria-hidden="true"></i> Editar
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="clickDelete(tela)">
+                <i class="fa fa-trash" aria-hidden="true"></i> Remover
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+
+<a class="nav-link" (click)="open(content)">TelasModal</a>
+
+<hr>
