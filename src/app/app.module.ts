@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 import { RouterModule, Routes } from '@angular/router';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
@@ -10,11 +11,16 @@ import { UserComponent } from './components/user/user.component';
 import { DataService } from './services/data.service';
 import { AboutComponent } from './components/about/about.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
-import { AlunoComponent } from './components/aluno/aluno.component'
+import { AlunoComponent } from './components/aluno/aluno.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { TelasComponent } from './components/telas/telas.component';
+import { TelasModalComponent } from './components/telas-modal/telas-modal.component'
 
 
 const appRoutes: Routes = [
-  { path: '', component: PedidoComponent },
+  { path: 'usuarios', component: UsuariosComponent },
+  { path: '', component: TelasComponent },
+  { path: 'pedido', component: PedidoComponent },
   { path: 'aluno', component: AlunoComponent },
   { path: 'user', component: UserComponent },
   { path: 'about', component: AboutComponent }
@@ -27,13 +33,21 @@ const appRoutes: Routes = [
     UserComponent,
     AboutComponent,
     PedidoComponent,
-    AlunoComponent
+    AlunoComponent,
+    UsuariosComponent,
+    TelasComponent,
+    TelasModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    BootstrapModalModule,
     RouterModule.forRoot(appRoutes)
+  ],
+  //Don't forget to add the component to entryComponents section
+  entryComponents: [
+    TelasModalComponent
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

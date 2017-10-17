@@ -20,21 +20,6 @@ export class AlunoComponent implements OnInit {
 
   ngOnInit() {
 
-    var asdf = {
-      "_id": 100,
-      "nome": "Aluno100",
-      "dataNascimento": "2017-09-12",
-      "notas": [
-        {
-          "dataProva": "asd",
-          "nota": 123
-        },
-        {
-          "dataProva": "asd",
-          "nota": 123
-        }
-      ]
-    }
     this.refreshAlunos()
     this.alunoForm = {} as Aluno
   }

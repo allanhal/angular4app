@@ -5,8 +5,10 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class DataService {
 
-  url: string = 'https://rest-on-demand.herokuapp.com/'
-  api: string = 'api/'
+  // url: string = 'https://rest-on-demand.herokuapp.com/'
+  url: string = 'http://localhost:5000/'
+  // api: string = 'api/'
+  api: string = 'sql/'
   urlApi: string
 
   constructor(public http: Http) {
@@ -17,13 +19,17 @@ export class DataService {
     return this.http.get(this.urlApi + type).map(res => res.json())
   }
 
+  getUnit(type, id) {
+    return this.http.get(this.urlApi + type + '/' + id ).map(res => res.json())
+  }
+
   delete(type, pedido) {
-    return this.http.delete(this.urlApi + type + '/' + pedido._id)
+    return this.http.delete(this.urlApi + type + '/' + pedido.idusuarios)
       .map(success => success.status);
   }
 
   update(type, pedido) {
-    return this.http.put(this.urlApi + type + '/' + pedido._id, pedido)
+    return this.http.put(this.urlApi + type + '/' + pedido.idusuarios, pedido)
       .map(res => res.json())
   }
 

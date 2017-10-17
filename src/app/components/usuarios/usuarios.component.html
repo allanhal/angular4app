@@ -1,0 +1,81 @@
+<div class="container py-5">
+  <div class="text-center">
+    <h1 class="big-font">Usuarios</h1>
+  </div>
+  <hr>
+
+  <div class="row py-3">
+    <div class="col mx-3 py-3 my-3 round-corners" *ngFor="let usuario of usuarios">
+      <b>Id</b>:
+      <br>{{ usuario.idusuarios}}
+      <b>
+        <h5>Nome:</h5>
+      </b>
+      <h1>{{ usuario.Nome }}</h1>
+      <i>Ativo:</i>
+      <br><input type="checkbox" class="form-control" id="input" [(ngModel)]="usuario.Ativo" ng-keyup="usuarioFormKeyUp()" readonly>
+      <br>
+      <i>Data de Criação:</i>
+      <br>{{ usuario.datacriacao }}
+      <br>
+      <div class="row px-3">
+          <div class="col mx-1 py-1 my-1 round-corners" *ngFor="let tela of usuario.telas">
+          <b>Tela {{ index }}</b>
+          <br>
+          <h3>{{ tela.Nome }}</h3>
+          <i>tipo</i>
+          <br>{{ tela.tipo }}
+          <br>
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-sm btn-primary" (click)="clickEdit(usuario)">
+        <i class="fa fa-pencil" aria-hidden="true"></i> Editar
+      </button>
+      <button class="btn btn-sm btn-danger" (click)="clickDelete(usuario)">
+        <i class="fa fa-trash" aria-hidden="true"></i> Remover
+      </button>
+    </div>
+  </div>
+
+
+  <div class="row py-3">
+    <div class="col text-right">
+      <button class="btn btn-sm btn-primary btn-lg" (click)="clickRefresh()">
+        <i class="fa fa-refresh" aria-hidden="true"></i> Atualizar</button>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col">
+      <label for="inputId">Id:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="usuarioForm.idusuarios" ng-keyup="usuarioFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputNome">Nome:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="usuarioForm.Nome" ng-keyup="usuarioFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputNome">Ativo:</label>
+      <input type="checkbox" class="form-control" id="input" [(ngModel)]="usuarioForm.Ativo" ng-keyup="usuarioFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputNome">Data de Criação:</label>
+      <input type="date" class="form-control form-control-sm" id="input" [(ngModel)]="usuarioForm.datacriacao" ng-keyup="usuarioFormKeyUp()">
+    </div>
+
+    <div class="row py-3">
+      <div class="col text-right">
+        <button class="btn btn-sm btn-danger" (click)="clickClearUsuario()" ng-click="clearUsuario()">
+          <i class="fa fa-trash" aria-hidden="true"></i> Limpar</button>
+        <button class="btn btn-sm btn-success" (click)="clickSubmitUsuario()" ng-click="submitUsuario()">
+          <i class="fa fa-pencil" aria-hidden="true"></i> Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h3>Telas</h3>
+  </div>
+  <div class="modal-body">
+    <h1 class="big-font">Telas</h1>
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>
+
+
+
+
+<div class="container py-5">
+  <div class="text-center">
+    <h1 class="big-font">Telas</h1>
+  </div>
+  <hr>
+
+  <div class="row py-3">
+    <table class="table">
+      <thead>
+        <th>IdUsuario</th>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Ações</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tela of telas">
+          <td>{{ tela.idusuarios}}</td>
+          <td>{{ tela.Nome }}</td>
+          <td>{{ tela.tipo }}</td>
+          <td>
+            <button class="btn btn-sm btn-primary" (click)="clickEdit(tela)">
+              <i class="fa fa-pencil" aria-hidden="true"></i> Editar
+            </button>
+            <button class="btn btn-sm btn-danger" (click)="clickDelete(tela)">
+              <i class="fa fa-trash" aria-hidden="true"></i> Remover
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <div class="col mx-3 py-3 my-3 round-corners" *ngFor="let tela of telas">
+      <b>Id Usuario</b>:
+      <br>{{ tela.idusuarios}}
+      <b>
+        <h5>Nome:</h5>
+      </b>
+      <h1>{{ tela.Nome }}</h1>
+      <i>tipo</i>
+      <br>{{ tela.tipo }}
+      <br>
+      <br>
+      <button class="btn btn-sm btn-primary" (click)="clickEdit(tela)">
+        <i class="fa fa-pencil" aria-hidden="true"></i> Editar
+      </button>
+      <button class="btn btn-sm btn-danger" (click)="clickDelete(tela)">
+        <i class="fa fa-trash" aria-hidden="true"></i> Remover
+      </button>
+    </div> -->
+  </div>
+
+
+  <div class="row py-3">
+    <div class="col text-right">
+      <button class="btn btn-sm btn-primary btn-lg" (click)="clickRefresh()">
+        <i class="fa fa-refresh" aria-hidden="true"></i> Atualizar</button>
+    </div>
+  </div>
+
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+  </button>
+
+
+  <div class="row">
+    <div class="col">
+      <label for="inputId">Id Usuario:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="telaForm.idusuarios" ng-keyup="telaFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputNome">Nome:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="telaForm.Nome" ng-keyup="telaFormKeyUp()">
+    </div>
+
+    <div class="col">
+      <label for="inputNome">tipo:</label>
+      <input type="text" class="form-control" id="input" [(ngModel)]="telaForm.tipo" ng-keyup="telaFormKeyUp()">
+    </div>
+
+    <div class="row py-3">
+      <div class="col text-right">
+        <button class="btn btn-sm btn-danger" (click)="clickClearTela()" ng-click="clearTela()">
+          <i class="fa fa-trash" aria-hidden="true"></i> Limpar</button>
+        <button class="btn btn-sm btn-success" (click)="clickSubmitTela()" ng-click="submitTela()">
+          <i class="fa fa-pencil" aria-hidden="true"></i> Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -53,6 +53,7 @@
     "mongo": "^0.1.0",
     "mongodb": "^2.2.31",
     "mssql": "^3.3.0",
+    "ng2-bootstrap-modal": "^1.0.1",
     "nodemon": "^1.12.1",
     "popper.js": "^1.12.5",
     "rxjs": "^5.4.2",
