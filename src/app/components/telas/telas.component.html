@@ -26,30 +26,7 @@
   <hr>
 
   <div class="row py-3">
-    <table class="table">
-      <thead>
-        <th>IdUsuario</th>
-        <th>Nome</th>
-        <th>Tipo</th>
-        <th>Ações</th>
-      </thead>
-      <tbody>
-        <tr *ngFor="let tela of telas">
-          <td>{{ tela.idusuarios}}</td>
-          <td>{{ tela.Nome }}</td>
-          <td>{{ tela.tipo }}</td>
-          <td>
-            <button class="btn btn-sm btn-primary" (click)="clickEdit(tela)">
-              <i class="fa fa-pencil" aria-hidden="true"></i> Editar
-            </button>
-            <button class="btn btn-sm btn-danger" (click)="clickDelete(tela)">
-              <i class="fa fa-trash" aria-hidden="true"></i> Remover
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <!-- <div class="col mx-3 py-3 my-3 round-corners" *ngFor="let tela of telas">
+    <div class="col mx-3 py-3 my-3 round-corners" *ngFor="let tela of telas">
       <b>Id Usuario</b>:
       <br>{{ tela.idusuarios}}
       <b>
@@ -66,7 +43,7 @@
       <button class="btn btn-sm btn-danger" (click)="clickDelete(tela)">
         <i class="fa fa-trash" aria-hidden="true"></i> Remover
       </button>
-    </div> -->
+    </div>
   </div>
 
 
@@ -103,4 +80,3 @@
     </div>
   </div>
 </div>
-
