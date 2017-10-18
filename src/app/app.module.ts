@@ -18,8 +18,8 @@ import { TelasModalComponent } from './components/telas-modal/telas-modal.compon
 
 
 const appRoutes: Routes = [
-  { path: 'usuarios', component: UsuariosComponent },
-  { path: '', component: TelasComponent },
+  { path: '', component: UsuariosComponent },
+  { path: 'telas', component: TelasComponent },
   { path: 'pedido', component: PedidoComponent },
   { path: 'aluno', component: AlunoComponent },
   { path: 'user', component: UserComponent },
