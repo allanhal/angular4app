@@ -52,6 +52,10 @@ export class UsuariosComponent implements OnInit {
     })
   }
 
+  clickClearUsuario() {
+    this.usuarioForm = {} as Usuario
+  }
+
   clickSubmitUsuario() {
     var method = "";
     var id = this.usuarioForm.idusuarios;

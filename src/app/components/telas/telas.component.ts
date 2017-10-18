@@ -43,23 +43,25 @@ export class TelasComponent implements OnInit {
     })
   }
 
+  clickClearTela() {
+    this.telaForm = {} as Tela
+  }
+
   clickSubmitTela() {
-    var method = "";
-    var id = this.telaForm.idusuarios;
-    if (id) {
-      this.dataService.update('telas', this.telaForm).subscribe((tela) => {
-        alertify.success("Tela atualizado.");
-        this.refreshTelas()
-      })
+    // var method = "";
+    // var id = this.telaForm.idusuarios;
+    // if (id) {
+    //   this.dataService.update('telas', this.telaForm).subscribe((tela) => {
+    //     alertify.success("Tela atualizado.");
+    //     this.refreshTelas()
+    //   })
 
-    } else {
-      console.log('this.telaForm',this.telaForm)
-      this.dataService.save('telas', this.telaForm).subscribe((tela) => {
-        alertify.success("Tela salvo.");
-        this.refreshTelas()
-      })
-    }
-
+    // } else {
+    console.log('this.telaForm', this.telaForm)
+    this.dataService.save('telas', this.telaForm).subscribe((tela) => {
+      alertify.success("Tela salvo.");
+      this.refreshTelas()
+    })
   }
 
 }

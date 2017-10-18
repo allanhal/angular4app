@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 import { RouterModule, Routes } from '@angular/router';
-import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -43,7 +42,6 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    BootstrapModalModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
