@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "Angular 4 App to access a REST SERVER",
   "engines": {
-    "node": "6.11.3",
+    "node": "8.9.1",
     "npm": "5.5.1"
   },
   "main": "index.js",
