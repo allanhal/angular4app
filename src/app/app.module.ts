@@ -16,16 +16,15 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { TelasComponent } from './components/telas/telas.component';
 import { TelasModalComponent } from './components/telas-modal/telas-modal.component'
 
-
 const appRoutes: Routes = [
-  { path: '', component: UsuariosComponent },
+  { path: 'usuarios', component: UsuariosComponent },
   { path: 'telas', component: TelasComponent },
   { path: 'pedido', component: PedidoComponent },
+  { path: '', component: AlunoComponent },
   { path: 'aluno', component: AlunoComponent },
   { path: 'user', component: UserComponent },
   { path: 'about', component: AboutComponent }
 ]
-
 
 @NgModule({
   declarations: [

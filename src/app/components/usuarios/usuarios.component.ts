@@ -14,9 +14,7 @@ export class UsuariosComponent implements OnInit {
   usuarioFormChanged: boolean = false
   crud: string;
 
-
   constructor(private dataService: DataService) {
-
   }
 
   ngOnInit() {
@@ -27,14 +25,11 @@ export class UsuariosComponent implements OnInit {
   refreshUsuarios() {
     this.dataService.getAll('usuarios').subscribe((usuarios) => {
       this.usuarios = usuarios;
-
       this.usuarios.forEach(element => {
-
         this.dataService.getUnit('telas', element.idusuarios).subscribe((telas) => {
           element.telas = telas;
         })
       });
-
     })
   }
 
@@ -72,8 +67,6 @@ export class UsuariosComponent implements OnInit {
         this.refreshUsuarios()
       })
     }
-
   }
-
 
 }

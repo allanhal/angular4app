@@ -7,8 +7,8 @@ export class DataService {
 
   url: string = 'https://rest-on-demand.herokuapp.com/'
   // url: string = 'http://localhost:5000/'
-  // api: string = 'api/'
-  api: string = 'sql/'
+  api: string = 'api/'
+  // api: string = 'sql/'
   urlApi: string
 
   constructor(public http: Http) {

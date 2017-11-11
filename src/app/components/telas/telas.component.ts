@@ -58,7 +58,7 @@ export class TelasComponent implements OnInit {
 
     // } else {
     console.log('this.telaForm', this.telaForm)
-    this.dataService.save('telas', this.telaForm).subscribe((tela) => {
+    this.dataService.update('telas', this.telaForm).subscribe((tela) => {
       alertify.success("Tela salvo.");
       this.refreshTelas()
     })
